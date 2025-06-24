@@ -4,26 +4,77 @@ COLORS:
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
-
 */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:  border-box;
-}
-body{
-    font-family: "Chiron Sung HK",sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    color:#777;
-    padding: 30px;
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes padding and border in total width/height */
 }
 
+/* Style for the entire body */
+body {
+    font-family: "lato", sans-serif; /* Sets font family */
+    font-weight: 400; /* Sets font weight to normal */
+    font-size: 16px; /* Base font size */
+    line-height: 1.7; /* Line spacing for readability */
+    color: #777; /* Default text color (grayish) */
+    padding: 30px; /* Adds space around content inside body */
+}
+
+/* Main header section */
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.801),rgba(40, 180, 133, 0.795)), url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh; /* Takes 95% of viewport height */
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(126, 213, 111, 0.801), /* Light green with opacity */
+        rgba(40, 180, 133, 0.795) /* Dark green with opacity */
+    ), url(../img/hero.jpg); /* Background image path */
+    background-size: cover; /* Scale image to cover entire area */
+    background-position: top; /* Align background image to top */
+    position: relative; /* Allows positioning of children absolutely */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* Creates diagonal cut at bottom */
+}
+
+/* Container for the logo inside header */
+.logo-box {
+    position: absolute; /* Positioned relative to .header */
+    top: 40px; /* Distance from top of header */
+    left: 40px; /* Distance from left of header */
+}
+
+/* Logo image styling */
+.logo {
+    height: 35px; /* Fixed height for the logo image */
+}
+
+/* Container for the heading text */
+.text-box {
+    position: absolute; /* Positioned relative to .header */
+    top: 40%; /* 40% from top of header */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Adjust to truly center the box */
+}
+
+/* Overall heading style */
+.heading-primary {
+    color: #fff; /* White text color */
+    text-transform: uppercase; /* Make all text uppercase */
+}
+
+/* Main part of the heading */
+.heading-primary-main {
+    display: block; /* Forces it to appear on its own line */
+    font-size: 60px; /* Large font size */
+    font-weight: 500; /* Medium font weight */
+    letter-spacing: 30px; /* Spacing between letters */
+}
+
+/* Subheading under main heading */
+.heading-primary-sub {
+    display: block; /* Forces it to appear on its own line */
+    font-size: 20px; /* Smaller font size than main heading */
+    font-weight: 900; /* Extra bold */
+    letter-spacing: 15.7px; /* Spacing between letters */
 }
